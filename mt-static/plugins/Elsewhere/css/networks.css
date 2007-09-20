@@ -1,0 +1,52 @@
+.network a, .network span {
+    display: block;
+    padding: 4px 0 6px 27px;
+    background: url(../images/social-networks.gif) 0 0 no-repeat;
+    line-height: 1.2em !important;
+    overflow: hidden;
+}
+
+.network a.43things { background-position: 0 0; }
+.network a.bebo { background-position: 0 -40px; }
+.network a.catster { background-position: 0 -80px; }
+.network a.delicious { background-position: 0 -120px; }
+.network a.digg { background-position: 0 -160px; }
+.network a.dodgeball { background-position: 0 -200px; }
+.network a.dogster { background-position: 0 -240px; }
+.network a.dopplr { background-position: 0 -280px; }
+.network a.facebook { background-position: 0 -320px; }
+.network a.flickr { background-position: 0 -360px; }
+.network a.goodreads { background-position: 0 -400px; }
+.network a.h15 { background-position: 0 -440px; }
+.network a.jaiku { background-position: 0 -480px; }
+.network a.lastfm { background-position: 0 -520px; }
+.network a.linkedin { background-position: 0 -560px; }
+.network a.livejournal { background-position: 0 -600px; }
+.network a.mog { background-position: 0 -640px; }
+.network a.multiply { background-position: 0 -680px; }
+.network a.myspace { background-position: 0 -720px; }
+.network a.newsvine { background-position: 0 -760px; }
+.network a.ning { background-position: 0 -800px; }
+.network a.orkut { background-position: 0 -840px; }
+.network a.pandora { background-position: 0 -880px; }
+.network a.pownce { background-position: 0 -920px; }
+.network a.reddit { background-position: 0 -960px; }
+.network a.sonicliving { background-position: 0 -1000px; }
+.network a.stumbleupon { background-position: 0 -1040px; }
+.network a.tabblo { background-position: 0 -1080px; }
+.network a.tagworld { background-position: 0 -1120px; }
+.network a.technorati { background-position: 0 -1160px; }
+.network a.tribe { background-position: 0 -1200px; }
+.network a.twitter { background-position: 0 -1240px; }
+.network a.upcoming { background-position: 0 -1280px; }
+.network a.vox { background-position: 0 -1320px; }
+.network a.youtube { background-position: 0 -1360px; }
+.network a.zooomr { background-position: 0 -1400px; }
+.network a.aim { background-position: 0 -1440px; }
+.network a.icq { background-position: 0 -1480px; }
+.network a.gtalk { background-position: 0 -1520px; }
+.network a.msn { background-position: 0 -1560px; }
+.network a.yahoo { background-position: 0 -1600px; }
+.network a.jabber { background-position: 0 -1640px; }
+.network a.skype { background-position: 0 -1680px; }
+.network a.website { background-position: 0 -1720px; }

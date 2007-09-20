@@ -1,0 +1,140 @@
+<mt:setvar name="edit_author" value="1">
+
+<mt:setvarblock name="page_title"><__trans phrase="Other Profiles"></mt:setvarblock>
+
+<mt:setvarblock name="html_head" append="1">
+<link rel="stylesheet" type="text/css" href="<mt:var name="static_uri">plugins/Elsewhere/css/networks.css" />
+
+<style type="text/css">
+.remove-button {
+	background: none;
+	float: right;
+	margin-top: 5px;
+}
+</style>
+
+<script type="text/javascript">
+<!--
+
+function verifyDelete( delete_item ){
+    conf = confirm( "Are you sure you want to delete " + delete_item + "?" );
+    if ( conf ) {
+        return true;
+    }
+    return false;
+}
+
+// -->
+</script>
+</mt:setvarblock>
+
+<mt:setvarblock name="content_nav">
+    <mt:include name="include/users_content_nav.tmpl">
+</mt:setvarblock>
+
+<mt:setvarblock name="related_content">
+    <h3>Your Profiles</h3>
+
+    <mt:if name="profiles">
+    <p>Here are the profiles you've set up:</p>
+
+    <ul id="other-profiles" class="network">
+    <mt:loop name="profiles">
+    <li>
+        <form method="post" action="<mt:var name="script_url">" onsubmit="return verifyDelete('your profile for <mt:var name="label" escape="js">');">
+            <input type="hidden" name="__mode" value="remove_other_profile" />
+            <input type="hidden" name="magic_token" value="<mt:var name="magic_token">" />
+            <input type="image" src="<mt:var name="static_uri">plugins/Elsewhere/images/delete.gif" value="Delete" class="remove-button" />
+            <input type="hidden" name="ident" value="<mt:var name="type" escape="html">:<mt:var name="ident" escape="html">" />
+        </form>
+
+        <a href="<mt:var name="uri" escape="html">" rel="me" class="<mt:var name="type">"><mt:var name="label" escape="html"></a>
+    </li>
+    </mt:loop>
+    </ul>
+    <mt:else>
+    <p>You haven't added any other profiles yet! Add a profile using the forms to the left.</p>
+    </mt:else>
+    </mt:if>
+    
+    <h3>Embed Your Profiles</h3>
+    <p><a href="javascript:void(0)" onclick="openDialog( null, 'embed_profiles' ); return false;">Get the HTML</a> you'll need to embed your profile data into your blog.</p>
+</mt:setvarblock>
+
+<mt:include name="include/header.tmpl">
+
+<h3>Social Networking Services</h3>
+<p>A profile on a social networking service or instant messaging service.</p>
+
+<form id="add-network" method="post" action="<mt:var name="script_url">">
+	<input type="hidden" name="__mode" value="add_other_profile" />
+    <input type="hidden" name="magic_token" value="<mt:var name="magic_token">" />
+
+	<mtapp:setting
+        id="profile_type"
+        label="<__trans phrase="Service">"
+        content_class="field-content-text">
+        <select name="profile_type" id="profile_type">
+            <mt:loop name="networks">
+            <option value="<mt:var name="type" escape="html">"><mt:var name="label" escape="html"></option>
+            </mt:loop>
+        </select>
+    </mtapp:setting>
+
+    <mtapp:setting
+        id="profile_id"
+        label="<__trans phrase="Username / User ID">"
+        content_class="field-content-text">
+        <input type="text" name="profile_id" size="30" value="" />
+    </mtapp:setting>
+    
+    <mt:setvarblock name="action_buttons">
+        <button
+            type="submit"
+            accesskey="s"
+            title="<__trans phrase="Add Service (s)">"
+            class="primary-button"
+            ><__trans phrase="Add Service"></button>
+    </mt:setvarblock>
+    <mt:include name="include/actions_bar.tmpl" bar_position="normal" 
+        hide_pager="1" settings_bar="1">
+</form>
+
+<h3>Personal Website</h3>
+<p>A blog, a website, or anywhere else you can be found online.</p>
+
+<form id="add-website" method="post" action="<mt:var name="script_url">">
+	<input type="hidden" name="__mode" value="add_other_profile" />
+    <input type="hidden" name="magic_token" value="<mt:var name="magic_token">" />
+
+	<mtapp:setting
+        id="profile_label"
+        label="<__trans phrase="Label">"
+        hint="<__trans phrase="Example: My Weblog">"
+        show_hint="1"
+        content_class="field-content-text">
+        <input type="text" name="profile_label" size="30" />
+    </mtapp:setting>
+
+    <mtapp:setting
+        id="profile_uri"
+        label="<__trans phrase="URI">"
+        hint="<__trans phrase="Example: http://boingboing.net">"
+        show_hint="1"
+        content_class="field-content-text">
+        <input type="text" name="profile_uri" size="30" value="http://" />
+    </mtapp:setting>
+    
+    <mt:setvarblock name="action_buttons">
+        <button
+            type="submit"
+            accesskey="s"
+            title="<__trans phrase="Add Website (s)">"
+            class="primary-button"
+            ><__trans phrase="Add Website"></button>
+    </mt:setvarblock>
+    <mt:include name="include/actions_bar.tmpl" bar_position="normal" 
+        hide_pager="1" settings_bar="1">
+</form>
+
+<mt:include name="include/footer.tmpl">

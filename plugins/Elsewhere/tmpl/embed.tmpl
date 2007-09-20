@@ -1,0 +1,19 @@
+<mt:setvarblock name="page_title">Embed Your Profile</mt:setvarblock>
+<mt:include name="dialog/header.tmpl">
+
+<p>Copy the HTML below and paste it into your blog template.</p>
+
+<textarea rows="10" style="width: 100%"><mt:var name="embed" escape="html"></textarea>
+
+<div class="actions-bar">
+    <div class="actions-bar-inner pkg actions">
+        <button
+            onclick="closeDialog(); return false"
+            type="submit"
+            accesskey="x"
+            title="<__trans phrase="Close (x)">"
+            ><__trans phrase="Close"></button>
+    </div>
+</div>
+
+<mt:include name="dialog/footer.tmpl">
