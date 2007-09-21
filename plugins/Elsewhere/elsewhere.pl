@@ -42,10 +42,7 @@ sub init_registry {
             },
         },
         callbacks => {
-            'MT::App::CMS::template_output.edit_author' => sub {
-                $plugin->insert_profile_link( @_ );
-            },
-            'MT::App::CMS::template_output.other_profiles' => sub {
+            'MT::App::CMS::template_source.users_content_nav' => sub {
                 $plugin->insert_profile_link( @_ );
             },
         },
@@ -86,9 +83,17 @@ sub tag_OtherProfileVar {
 
 sub insert_profile_link {
     my $plugin = shift;
-    my( $cb, $app, $html_ref, $param, $tmpl ) = @_;
+    my( $cb, $app, $html_ref ) = @_;
     my $base_uri = $app->uri;
-    $$html_ref =~ s/(<li>.*?Permissions<\/a><\/li>)/$1\n<li><a href="$base_uri?__mode=other_profiles">Other Profiles<\/a><\/li>/;
+    my $mode = $app->mode;
+    my $active = $mode eq 'other_profiles' ? ' class="active"' : '';
+    if ( $active ) {
+        $$html_ref =~ s/<li class="active">/<li>/g;
+    }
+    ## Somewhat nasty: we need to match in users_content_nav.tmpl under
+    ## only certain scenarios, i.e. in the Author Profile cases of that
+    ## template. Yuck.
+    $$html_ref =~ s/(<li[^>]*>.*?author_id=.*?<__trans phrase="Permissions"><\/a><\/li>)/$1\n<li$active><a href="$base_uri?__mode=other_profiles">Other Profiles<\/a><\/li>/g;
 }
 
 sub other_profiles {
