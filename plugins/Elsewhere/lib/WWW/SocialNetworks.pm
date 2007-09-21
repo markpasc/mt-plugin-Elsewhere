@@ -23,7 +23,7 @@ our %Networks = (
     hi5         => [ 'Hi5', 'http://hi5.com/friend/profile/displayProfile.do?userid=%s' ],
     jaiku       => [ 'Jaiku', 'http://%s.jaiku.com/' ],
     lastfm      => [ 'Last.fm', 'http://www.last.fm/user/%s/' ],
-    linkedin    => [ 'LinkedIn', 'http://www.linkedin.com/in/%s/' ],
+    linkedin    => [ 'LinkedIn', 'http://www.linkedin.com/in/%s' ],
     livejournal => [ 'LiveJournal', 'http://%s.livejournal.com/' ],
     mog         => [ 'MOG', 'http://mog.com/%s' ],
     multiply    => [ 'Multiply', 'http://%s.multiply.com/' ],
