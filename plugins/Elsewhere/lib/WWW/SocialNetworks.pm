@@ -19,7 +19,7 @@ our %Networks = (
     dopplr      => [ 'Dopplr', 'http://www.dopplr.com/traveller/%s/' ],
     facebook    => [ 'Facebook', 'http://www.facebook.com/profile.php?id=%s' ],
     flickr      => [ 'Flickr', 'http://flickr.com/photos/%s/' ],
-    goodreads   => [ 'GoodReads', 'http://www.goodreads.com/user/show/%s' ],
+    goodreads   => [ 'Goodreads', 'http://www.goodreads.com/user/show/%s' ],
     hi5         => [ 'Hi5', 'http://hi5.com/friend/profile/displayProfile.do?userid=%s' ],
     jaiku       => [ 'Jaiku', 'http://%s.jaiku.com/' ],
     lastfm      => [ 'Last.fm', 'http://www.last.fm/user/%s/' ],
