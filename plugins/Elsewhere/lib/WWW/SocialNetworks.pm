@@ -37,7 +37,6 @@ our %Networks = (
     sonicliving => [ 'SonicLiving', 'http://www.sonicliving.com/user/%s/' ],
     stumbleupon => [ 'StumbleUpon', 'http://%s.stumbleupon.com/' ],
     tabblo      => [ 'Tabblo', 'http://www.tabblo.com/studio/person/%s/' ],
-    tagworld    => [ 'TagWorld', 'http://www.tagworld.com/btrott' ],
     technorati  => [ 'Technorati', 'http://technorati.com/people/technorati/%s' ],
     tribe       => [ 'Tribe', 'http://people.tribe.net/%s' ],
     twitter     => [ 'Twitter', 'http://twitter.com/%s' ],
