@@ -50,3 +50,12 @@
 .network a.jabber { background-position: 0 -1640px; }
 .network a.skype { background-position: 0 -1680px; }
 .network a.website { background-position: 0 -1720px; }
+
+.network a.1upcom { background: url(../images/more-networks.png) 0 0 no-repeat; }
+.network a.iconbuffet { background: url(../images/more-networks.png) 0 -40px no-repeat; }
+.network a.iusethis { background: url(../images/more-networks.png) 0 -80px no-repeat; }
+.network a.magnolia { background: url(../images/more-networks.png) 0 -120px no-repeat; }
+.network a.ohloh { background: url(../images/more-networks.png) 0 -160px no-repeat; }
+.network a.steam { background: url(../images/more-networks.png) 0 -200px no-repeat; }
+.network a.virb { background: url(../images/more-networks.png) 0 -240px no-repeat; }
+.network a.xboxlive { background: url(../images/more-networks.png) 0 -280px no-repeat; }
