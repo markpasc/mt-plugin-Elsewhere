@@ -1,7 +1,7 @@
 .network a, .network span {
     display: block;
     padding: 4px 0 6px 27px;
-    background: url(../images/social-networks.gif) 0 0 no-repeat;
+    background: url(../images/social-networks.gif) 0 -1720px no-repeat;
     line-height: 1.2em !important;
     overflow: hidden;
 }
